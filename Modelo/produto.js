@@ -14,7 +14,6 @@ export default class Produto{
     get codigo(){
         return this.#codigo;
     }
-
     set codigo(novoCodigo){
         this.#codigo=novoCodigo;
     } 
@@ -22,7 +21,6 @@ export default class Produto{
     get descricao(){
         return this.#descricao;
     }
-
     set descricao(novaDescricao){
         this.#descricao = novaDescricao;
     }
@@ -30,7 +28,6 @@ export default class Produto{
     get precoCusto(){
         return this.#precoCusto;
     }
-
     set precoCusto(novoPreco){
         this.#precoCusto = novoPreco;
     }
@@ -38,7 +35,6 @@ export default class Produto{
     get precoVenda(){
         return this.#precoVenda;
     }
-
     set precoVenda(novoPreco){
         this.#precoVenda = novoPreco;
     }
@@ -46,7 +42,6 @@ export default class Produto{
     get qtdEstoque(){
         return this.#qtdEstoque;
     }
-
     set qtdEstoque(novaQtd){
         this.#qtdEstoque = novaQtd;
     }
@@ -54,7 +49,6 @@ export default class Produto{
     get urlImagem(){
         return this.#urlImagem;
     }
-
     set urlImagem(novaUrl){
         this.#urlImagem=novaUrl;
     }
@@ -62,18 +56,19 @@ export default class Produto{
     get dataValidade(){
         return this.#dataValidade;
     }
-
     set dataValidade(novaData){
         this.#dataValidade = novaData;
     }
-    set categoria(categoria){
-        if (categoria instanceof Categoria)
-            this.#categoria = categoria;
-    }
+
     get categoria()
     {
         return this.#categoria;
     }
+    set categoria(novaCategoria){
+        if (novaCategoria instanceof Categoria)
+            this.#categoria = novaCategoria;
+    }
+    
     //construtor (criador de um produto)
     constructor(codigo=0, descricao="",precoCusto=0,precoVenda=0,qtdEstoque=0,
                 urlImagem="", dataValidade="", categoria= {}){
